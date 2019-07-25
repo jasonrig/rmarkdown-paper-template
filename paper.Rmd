@@ -1,0 +1,72 @@
+---
+bibliography: refs.bib
+csl: jamia.csl
+fontsize: 10pt
+geometry: margin=1in
+header-includes:
+- \pagenumbering{gobble}
+- \renewcommand{\familydefault}{\sfdefault}
+- \usepackage{lipsum}
+output:
+  pdf_document:
+    fig_caption: yes
+urlcolor: blue
+---
+
+```{r setup, include = FALSE}
+library(dplyr)
+library(ggplot2)
+```
+
+\textbf{\Large{A Paper Written in Markdown}}
+
+\textbf{\Large{Jason Rigby$^1$}}
+
+\begingroup\large
+$^1$Department of Epidemiology \& Preventive Medicine, Monash University, Melbourne VIC, Australia
+
+Corresponding Author: Jason Rigby, Ph. D., ASPREE Co-ordinating Centre, Department of Epidemiology \& Preventive Medicine, Monash University, 99 Commercial Road, Melbourne, Victoria 3004, Australia (jason.rigby@monash.edu)
+\endgroup
+
+## ABSTRACT
+
+\textbf{Objective:} \lipsum[1]\newline
+\textbf{Materials and Methods:} \lipsum[1]\newline
+\textbf{Results:} \lipsum[1]\newline
+\textbf{Discussion:} \lipsum[1]\newline
+\textbf{Conclusions:} \lipsum[1]
+
+\textbf{Key words:} write some key words here
+
+\twocolumn
+
+## INTRODUCTION
+This is a citation [@Schwartz1970]. These are several citations[@Mandl2012; @Wang2015; @Tamang2015; @Jung2014; @Cure2015]. \lipsum[2]
+
+## METHODS
+\lipsum[1] See figure \ref{fig:important-figure}.
+
+![A figure caption \label{fig:important-figure}](figures/graph.dot)
+
+## RESULTS
+\lipsum[2-4]
+
+```{r diamonds, echo=FALSE, fig.cap="Diamonds: Price vs Carat \\label{fig:diamonds}"}
+ggplot(diamonds,aes(x=carat,y=price,color=cut))+geom_point()
+```
+
+See figure \ref{fig:diamonds} for more information.
+
+## DISCUSSION
+\lipsum[3-6]
+
+## CONCLUSION
+\lipsum[7]
+
+## FUNDING
+\lipsum[8]
+
+## ACKNOWLEDGEMENTS
+\lipsum[9]
+
+## REFERENCES
